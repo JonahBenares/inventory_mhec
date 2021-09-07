@@ -101,6 +101,7 @@ class Receive extends CI_Controller {
                     'shipping_fee'=>$items->shipping_fee,
                     'currency'=>$items->currency,
                     'remarks'=>$items->remarks,
+                    //'expiration_date'=>$items->expiration_date,
                     'total'=>$total,
                     'total_net_cost'=>$total_net_cost,
                     
