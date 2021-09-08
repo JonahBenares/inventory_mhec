@@ -75,7 +75,7 @@
 						<table width="100%">
 							<tr>
 								<td width="10%"><label>Date:</label></td>
-								<td width="90%"><input type = "date" name = "receive_date" class = "form-control" id="e" style="pointer-events: none;"><br></td>
+								<td width="90%"><input type = "date" name = "receive_date" class = "form-control" id="e" ><br></td>
 							</tr>
 							<tr>
 								<td width="10%"><label>DR#:</label></td>
@@ -118,8 +118,8 @@
 						<table width="100%">
 							<tr>
 								<td width="20%"><label>Request Date/Time:</label></td>
-								<td width="40%"><input type = "date" name = "request_date" id="d" class = "form-control" style="margin:4px;pointer-events: none;"></td>
-								<td width="40%"><input type = "text" placeholder="Time" name = "request_time" class = "form-control" style="margin:4px;pointer-events: none;" value="<?php echo date('H:i'); ?>"></td>
+								<td width="40%"><input type = "date" name = "request_date" id="d" class = "form-control" style="margin:4px;"></td>
+								<td width="40%"><input type = "text" placeholder="Time" name = "request_time" class = "form-control" style="margin:4px;" value="<?php echo date('H:i'); ?>"></td>
 							</tr>
 							<tr>
 								<td width="20%"><label>Request Type:</label></td>
