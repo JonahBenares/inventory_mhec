@@ -521,6 +521,7 @@ class Masterfile extends CI_Controller {
                 $released =$this->super_model->select_column_where("signatories", "released", "employee_id", $sig->employee_id);
                 $approved =$this->super_model->select_column_where("signatories", "approved", "employee_id", $sig->employee_id);
                 $acknowledged =$this->super_model->select_column_where("signatories", "acknowledged", "employee_id", $sig->employee_id);
+                $purchaser =$this->super_model->select_column_where("signatories", "purchaser", "employee_id", $sig->employee_id);
                 $data['signatory'][] = array(
                     'employee'=>$employee,
                     'requested'=>$requested,
@@ -531,7 +532,8 @@ class Masterfile extends CI_Controller {
                     'received'=>$received,
                     'released'=>$released,
                     'approved'=>$approved,
-                    'acknowledged'=>$acknowledged
+                    'acknowledged'=>$acknowledged,
+                    'purchaser'=>$purchaser
                 );
             }
         }else{
@@ -870,6 +872,7 @@ class Masterfile extends CI_Controller {
             $released =$this->super_model->select_column_where("signatories", "released", "employee_id", $emp->employee_id);
             $approved =$this->super_model->select_column_where("signatories", "approved", "employee_id", $emp->employee_id);
             $acknowledged =$this->super_model->select_column_where("signatories", "acknowledged", "employee_id", $emp->employee_id);
+            $purchaser =$this->super_model->select_column_where("signatories", "purchaser", "employee_id", $emp->employee_id);
             
             $data['employee'][] = array(
                 'employeeid'=>$emp->employee_id,
@@ -882,7 +885,8 @@ class Masterfile extends CI_Controller {
                 'received'=>$received,
                 'released'=>$released,
                 'approved'=>$approved,
-                'acknowledged'=>$acknowledged
+                'acknowledged'=>$acknowledged,
+                'purchaser'=>$purchaser
             );
         }
         $data['access']=$this->access;
